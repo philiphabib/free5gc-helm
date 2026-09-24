@@ -1,0 +1,19 @@
+global:
+  # AMF (N2)
+  amf:
+    n2network:
+      masterIf: enp1s0
+  # SMF (N4)
+  smf:
+    n4network:
+      masterIf: enp1s0
+  # UPF networks
+  upf:
+    n3network:
+      masterIf: enp1s0
+    n4network:
+      masterIf: enp1s0
+    n6network:
+      masterIf: enp1s0
+    n9network:
+      masterIf: enp1s0
