@@ -30,7 +30,7 @@ global:
   # AMF Multus CNI Configuration
   amf:
     multus:
-      enabled: false  # Default: disabled for cloud-native deployments
+      enabled: true  # Default: disabled for cloud-native deployments
       n2if:  # NGAP interface (used when multus.enabled=true)
         ipAddress: 10.100.50.249
       n2network:
@@ -44,17 +44,17 @@ global:
         excludeIP: 10.100.50.254
     service:
       ngap:
-        enabled: true  # Enable NGAP service for external access
+        enabled: false  # Enable NGAP service for external access
         name: amf-n2
         port: 38412
         nodeport: 31412
         protocol: SCTP
         type: NodePort
-  
+
   # SMF Multus CNI Configuration
   smf:
     multus:
-      enabled: false  # Default: disabled for cloud-native deployments
+      enabled: true  # Default: disabled for cloud-native deployments
       n4if:  # PFCP interface (used when multus.enabled=true)
         ipAddress: 10.100.50.244
       n4network:
@@ -66,11 +66,11 @@ global:
         cidr: 29
         gatewayIP: 10.100.50.246
         excludeIP: 10.100.50.246
-  
+
   # UPF Multus CNI Configuration
   upf:
     multus:
-      enabled: false  # Default: disabled for cloud-native deployments
+      enabled: true  # Default: disabled for cloud-native deployments
       # Static IP configurations for UPF instances (used when multus.enabled=true)
       upf:
         n3if:
